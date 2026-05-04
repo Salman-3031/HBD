@@ -90,3 +90,38 @@ function timeElapse(targetDate){
 
     $("#clock").html(result);
 }
+
+(function ($) {
+    $.fn.typewriter = function () {
+        this.each(function () {
+            var $el = $(this);
+            var html = $el.html();
+            var i = 0;
+            var result = "";
+
+            $el.html("");
+
+            var timer = setInterval(function () {
+                var char = html.charAt(i);
+
+                if (char === "<") {
+                    // copy full HTML tag at once
+                    var tagEnd = html.indexOf(">", i);
+                    result += html.substring(i, tagEnd + 1);
+                    i = tagEnd + 1;
+                } else {
+                    result += char;
+                    i++;
+                }
+
+                $el.html(result + (i % 2 === 0 ? "_" : "")); // blinking cursor
+
+                if (i >= html.length) {
+                    clearInterval(timer);
+                    $el.html(result); // remove cursor at end
+                }
+            }, 80); // smooth speed
+        });
+        return this;
+    };
+})(jQuery);

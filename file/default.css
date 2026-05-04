@@ -39,23 +39,14 @@ a {
   font-size: larger;
   font-weight: bolder;
 }
-/* #clock-box {
+#clock-box {
   position: absolute;
   left: 60px;
-  top: 550px;
+  top: 600px;
   font-size: 28px;
   display: none;
-} */
- #clock-box {
-    position: absolute;
-    bottom: 70px;
-    width: 100%;
-    left: 25%;
-    transform: translateX(-50%);
-    text-align: center;
-    font-size: 24px;
-    color: #fff;
-    z-index: 9999;
+  z-index: 999;
+  color: white;
 }
 #clock-box a {
   font-size: 28px;
@@ -63,23 +54,13 @@ a {
 }
 #clock {
   margin-left: 48px;
-  font-size: 28px;
-      font-family: Arial, sans-serif;
-  /* font-weight: bold; */
+font-size: 30px;
+}
+#clock span {
+  font-size: 20px;
 }
 #clock .digit {
   font-size: 64px;
-}
-
-#clock .num {
-    font-size: 30px;   /* bigger numbers */
-    font-weight: bold;
-    margin: 0 5px;
-}
-
-#clock .label {
-    font-size: 18px;   /* smaller text */
-    margin-right: 10px;
 }
 #canvas {
   margin: 0 auto;
